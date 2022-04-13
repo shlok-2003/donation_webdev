@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html large="en">
+    <head>
+    <title>Donation</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- MY STYLE.CSS -->
+    <link rel="stylesheet" href="../Code/css/css-donate.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--Awesome-Fonts Icons-->
+    <script src="https://kit.fontawesome.com/5d34daef41.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <!-- Donation section starts -->
+    <div class="container">
+        <form onsubmit="event.preventDefault(); validateDonation(); reset(); return false" method="post">
+        <div class="row">
+            <div class="col">
+                <h3 class="title">User information</h3>
+                <div class="inputBox">
+                    <span class="text-capitalize">Donor's full name:</span>
+                    <input id="name" class="name" type="text">
+                    <small class="error"></small>
+                </div>
+                    <div class="inputBox">
+                        <span class="text-capitalize">Email id:</span>
+                        <input id="email" class="email" type="email">
+                        <small class="error"></small>
+                    </div>
+                <div class="inputBox">
+                    <span class="text-capitalize">Address:</span>
+                    <input id="address" class="address" type="text">
+                    <small class="error"></small>
+                </div>
+                <div class="inputBox">
+                    <span class="text-capitalize">City:</span>
+                    <input id="city" class="city" type="text">
+                    <small class="error"></small>
+                </div>
+                <div class="flex">
+                    <div class="inputBox">
+                        <span class="text-capitalize">State:</span>
+                        <input id="state" class="state" type="text">
+                        <small class="error"></small>
+                    </div>
+                    <div class="inputBox">
+                        <span class="text-capitalize">Pin code:</span>
+                        <input id="pincode" class="pincode" type="tel" pattern="[0-9]{6}">
+                        <small class="error"></small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h3 class="title">Payment</h3>
+                <div class="inputBox">
+                    <span class="text-capitalize">Cards accepted:</span>
+                    <img src="../Images/Payment/payment.jpg" height="40px">
+                </div>
+                <div class="inputBox">
+                    <span class="text-capitalize"> Name on card:</span>
+                    <input id="nameoncard" class="nameoncard" type="text" value="XYZ" readonly>
+                    <small class="error"></small>
+                </div>
+                <div class="inputBox">
+                    <span class="text-capitalize">Credit card number:</span>
+                    <input id="creditcardnumber" class="creditcardnumber" type="tel" pattern="[0-9]{16}" value="1234XXXXXXXXXXXX" readonly>
+                    <small class="error"></small>
+                </div>
+                <div class="inputBox">
+                    <span class="text-capitalize">Exp month:</span>
+                    <input id="expmonth" class="expmonth" type="text" value="AUG" readonly>
+                    <small class="error"></small>
+                <div class="flex">
+                    <div class="inputBox">
+                        <span class="text-capitalize">Exp year:</span>
+                        <input id="expyear" class="expyear" type="tel" pattern="[0-9]{4}" value="2023" readonly>
+                        <small class="error"></small>
+                    </div>
+                    <div class="inputBox">
+                        <span class="text-capitalize">CVV:</span>
+                        <input id="cvv" class="cvv" type="text" value="7XXX" readonly>
+                        <small class="error"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="amount">
+                <span class="text-capiltalize">Amount: </span>
+                <input id="amount" class="amount" type="tel" placeholder="Enter the Amount you want to donate">
+                <small class="error"></small>
+            </div>
+        </div>
+        <div class="text-center">
+        <input type="submit" value="Confirm donation" class="submit-btn">
+        <p class="submit-success" id="submit-success"></p>
+        </div>
+        </form>
+    </div>
+    <!-- Donation section starts -->
+
+<!-- SweetAlert js -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- MY SCRIPT.JS -->
+<script src="../Code/js/script-donate.js"></script>
+</body>
+</html>

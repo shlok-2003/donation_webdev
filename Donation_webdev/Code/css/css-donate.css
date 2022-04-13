@@ -1,0 +1,126 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(0, 0, 0, 0.795);
+}
+
+/* Donation section starts */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    padding-bottom: 70px;
+}
+.container form{
+    padding: 20px;
+    width: 700px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.205);
+}
+.container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 15px;
+}
+.container form .row .col{
+    flex: 1 1 250px;
+}
+.container form .row .col .title{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+.container form .row .col .inputBox input{
+    margin: 15px 0 0 0;
+    border: none;
+}
+.container form .row .col .inputBox span{
+    margin-bottom: 2px;
+    font-weight: 200;
+    font-size: 15.5px;
+    display: block;
+}
+.container form .row .col .inputBox input{
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    resize: none;
+    border-bottom: 1px solid #d3d3d3;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+.container form .row .col .inputBox input[type="text"]:focus,
+.container form .row .col .inputBox input[type="tel"]:focus
+{
+    border: none;
+    border-bottom: 1px solid rgb(19, 18, 18);
+}
+.container form .row .col .flex{
+    display:flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.container form .row .col .flex .inputBox{
+    margin-top: 5px;
+}
+.container .row .amount .span{
+    margin-bottom: 2px;
+    font-weight: 200;
+    font-size: 15.5px;
+    display: block;
+}
+.container .row .amount input[type="tel"]{
+    width: 50%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    resize: none;
+    border-bottom: 1px solid #d3d3d3;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+.container .row .amount input[type="tel"]:focus{
+    border: none;
+    border-bottom: 1px solid rgb(19, 18, 18);
+}
+.error{
+    color: red;
+}
+.error-border{
+    border-bottom: 1px solid #000;
+}
+.submit-success{
+    color: #28a745;
+}
+.container form .submit-btn{
+    width:100%;
+    margin-top: 5px;
+    padding: 12px;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 300;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 0);
+    
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.container form .submit-btn:hover{
+    background-color: #18bd5b;
+    color: #fff;
+}
+/* Donation section starts */
+
