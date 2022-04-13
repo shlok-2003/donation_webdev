@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Receipt</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- MY STYLE.CSS -->
+    <link rel="stylesheet" href="../Code/css/style-receipt.css">
+    <!--Awesome-Fonts Icons-->
+    <script src="https://kit.fontawesome.com/5d34daef41.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="receipt">
+            <div class="title fw-bolder"><i class="fas fa-receipt"></i>  RECEIPT</div>
+                <div class="personal-info">
+                    <div class="info-title text-uppercase">Personal Information</div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="htxt" id="name">Name : </div>
+                            <div class="htxt" id="email">Email ID: </div>
+                            <div class="htxt" id="address">Address: </div>
+                            <div class="htxt" id="city">City: </div>
+                            <div class="htxt" id="state">State: </div>
+                            <div class="htxt" id="pincode">Pin Code: </div>
+                        </div>
+                        <div class="col">
+                            <div class="content" id="name-content"></div>
+                            <div class="content" id="email-content"></div>
+                            <div class="content" id="address-content"></div>
+                            <div class="content" id="city-content"></div>
+                            <div class="content" id="state-content"></div>
+                            <div class="content" id="pin-content"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-info">
+                    <div class="info-title text-uppercase">Payment Information</div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="htxt" id="nameoncard">Name on Card: </div>
+                            <div class="htxt" id="creditcardnumber">Credit Card Number: </div>
+                            <div class="htxt" id="expmonth">Expiry Month: </div>
+                            <div class="htxt" id="expyear">Expiry Year: </div>
+                            <div class="htxt" id="cvv">CVV: </div>
+                            <div class="htxt amount-txt fw-bold" id="amount">Total Amount: </div>
+                        </div>
+                        <div class="col">
+                            <div class="content" id="nameoncard-content"></div>
+                            <div class="content" id="creditcardnumber-content"></div>
+                            <div class="content" id="expmonth-content"></div>
+                            <div class="content" id="expyear-content"></div>
+                            <div class="content" id="cvv-content"></div>
+                            <div class="content" id="amount-content"></div>
+                        </div>    
+                    </div>        
+                </div>
+            <div class="text-center mt-5">Thanking you for your contribution</div>
+        </div>
+    </div>
+    <!-- MY SCRIPY.JS -->
+    <script>
+        document.getElementById("name-content").innerText = localStorage.getItem("textvalue");
+    </script>   
+</body>
+</html>
